@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente general */
+    margin: 0; /* Elimina los márgenes del cuerpo */
+    padding: 0; /* Elimina el padding del cuerpo */
+    background-color: #f9f9f9; /* Color de fondo */
+    
+}
+.logo{
+    position: absolute;
+    top: 1%;
+    right: 30px;
+    width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Esto mantendrá la proporción de la imagen */
+  }    
+  .logotamano {
+    width: 60%;
+    height: auto;
+  }
+
+header{
+    font-size: small;
+    grid-area: header; /* Posiciona el header en el área definida */
+    text-align: left; /* Centra el texto horizontalmente */
+    background-color: #802434; /* Fondo guindo */
+    color: white; /* Texto blanco */
+    padding: 5px; 
+    list-style: none;
+}
+nav {
+    background-color: #333;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu > li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.menu > li:hover {
+    background-color: #444;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+}
+
+.submenu li {
+    padding: 10px 15px;
+}
+
+.submenu li:hover {
+    background-color: #555;
+}
+
+/* Mostrar el submenú al pasar el mouse */
+.menu > li:hover .submenu {
+    display: block;
+}
+nav {
+    grid-area: nav; /* Posiciona el nav en el área definida */
+    background-color: gray; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Lista de navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    display: flex; /* Usa Flexbox para alinear los enlaces */
+    justify-content: space-around; /* Distribuye uniformemente los elementos */
+}
+
+/* Enlaces del menú de navegación */
+nav a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+
+article {
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para la imagen dentro del article */
+article img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del artículo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: 300px; /* Establece un tamaño fijo (puedes ajustarlo según sea necesario) */
+    display: block; /* Asegura que no haya márgenes alrededor de la imagen */
+    margin: 10px auto; /* Centra la imagen horizontalmente dentro del artículo */
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Ajusta el tamaño de fuente */
+    }
+    .container {
+        width: 100%; /* Contenedor ocupa el 100% del ancho */
+    }
+}
+.contenedor{
+    background-color: #e3e3e3;
+    width: 800px;
+    border: none;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer; /* Posiciona el footer en el área definida */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #802434; /* Fondo guindo */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño del texto */
+    margin: 0; /* Sin margen para que ocupe todo el ancho */
+    width: 100%; /* Asegura que el footer ocupe el 100% del ancho */
+}
+
+.iframe-container {
+    text-align: right; /* Alinear a la izquierda */
+    margin: 20px; /* Margen opcional para separación */
+}
+
+.iframe-container iframe {
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    height: 250px; /* Ajusta la altura según tus necesidades */
+    border: 0; /* Sin borde */
+}
+.footer-content {
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-top: 10px; /* Margen superior para separación */
+}
+
+.text-container {
+    margin-right: 20px; /* Margen derecho para separación entre el texto y el iframe */
+}
+

@@ -1,0 +1,72 @@
+::after,
+::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(#330000, #62152d);
+}
+input{
+    font: inherit;
+}
+
+.form{
+    margin: 40px auto;
+    padding: 3rem 1.5rem;
+    background-color:#fff;
+    width: min(350px, 90%);
+    border-radius: 10px ;
+    overflow: hidden;
+}
+.form_title{
+    font-size: 2rem;
+}
+.form_subtitle{
+    margin-top: .7rem;
+    color: #9c9999;
+}
+.form_inputs{
+    margin: 2rem 0 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+       color: #6b6b6b;
+}
+.from_label {
+    width: 100%;
+    display: block;
+    position: relative; /* Para controlar la posición de los hijos */
+}
+
+.form_input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d7d0d0;
+    padding: 1rem 1.5rem; /* Ajusta el padding */
+    color: #6b6b6b;
+    font-size: 1rem;
+}
+
+.form_text {
+    position: absolute; 
+    top: 50%; /* Centrado vertical inicial */
+    left: 1.5rem; /* Ajuste horizontal */
+    transform: translateY(-50%); /* Ajuste vertical */
+    background-color: white;
+    padding: 0 0.5rem;
+    color: #6b6b6b;
+    font-size: 1rem;
+    transition: transform 0.3s, font-size 0.3s;
+    pointer-events: none; /* Evita que se pueda seleccionar */
+}
+
+
+.form_input:focus + .form_text,
+.form_input:not(:placeholder-shown) + .form_text {
+    top: 0; /* Posiciona el texto flotante arriba */
+    transform: translateY(-50%) scale(0.8); /* Escala el texto */
+    color: #9c9999;
+}
+
